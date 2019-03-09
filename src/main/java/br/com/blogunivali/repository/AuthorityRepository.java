@@ -1,0 +1,11 @@
+package br.com.blogunivali.repository;
+
+import br.com.blogunivali.domain.Authority;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+/**
+ * Spring Data MongoDB repository for the Authority entity.
+ */
+public interface AuthorityRepository extends MongoRepository<Authority, String> {
+}

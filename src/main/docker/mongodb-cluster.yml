@@ -1,0 +1,16 @@
+version: '2'
+services:
+    blogunivali-mongodb:
+        image: mongo:4.0.2
+        ports:
+            - "27017:27017"
+        command: mongos --configdb blogunivali-mongodb-config
+    blogunivali-mongodb-node:
+        build:
+            context: .
+            dockerfile: mongodb/MongoDB.Dockerfile
+        command: mongod --replSet rs1 --noprealloc --smallfiles
+    blogunivali-mongodb-config:
+        image: mongo:4.0.2
+        container_name: blogunivali-mongodb-config
+        command: mongod --noprealloc --smallfiles --configsvr --dbpath /data/db
