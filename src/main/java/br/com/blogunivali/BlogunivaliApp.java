@@ -73,7 +73,7 @@ public class BlogunivaliApp {
         if (StringUtils.isBlank(contextPath)) {
             contextPath = "/";
         }
-        String hostAddress = "localhost";
+        String hostAddress = "0.0.0.0";
         try {
             hostAddress = InetAddress.getLocalHost().getHostAddress();
         } catch (UnknownHostException e) {
