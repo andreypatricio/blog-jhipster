@@ -33,7 +33,9 @@
     "rememberMeKey": "d1f402621e31b01cc6cfc095a9a4bb66a182f83657a92180e5732de49dbbcdaa61e6d2a302827aa232560fbaccffec5b91d8",
     "entitySuffix": "",
     "dtoSuffix": "DTO",
-    "otherModules": []
+    "otherModules": [],
+    "herokuAppName": "blog-univali",
+    "herokuDeployType": "git"
   },
   "git-provider": "GitHub",
   "git-company": "andreypatricio",
