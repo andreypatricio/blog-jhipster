@@ -1,0 +1,17 @@
+entity Blog {
+	blogName String,
+    description String, 
+    userAdmin String
+}
+
+entity Post {
+	title String,
+    content String, 
+    date Instant
+}
+
+relationship OneToMany {
+	Blog{post} to Post,
+}
+
+paginate Blog with infinite-scroll
